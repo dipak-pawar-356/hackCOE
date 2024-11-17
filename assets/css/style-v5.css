@@ -269,7 +269,7 @@ h6 {
 }
 
 p {
-    font-size: 1.8rem !important;
+    font-size: 1.8rem !important ;
     color: var(--text-black) ;
     line-height: 30px !important;
 }
@@ -763,7 +763,7 @@ a {
 
 /** Gallery **/
 .collection {
-  height: 100vh !important;
+  height: 80vh; /* Adjust this value as needed (e.g., 50vh for half the viewport) */
   background-image: url(../img/new_assets/bg_2.jpg);
   background-color: #1e232e !important;
   background-position: center;
@@ -772,7 +772,9 @@ a {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+  padding: 20px; /* Optional: Add padding for inner space */
 }
+
 
 .collection .content {
   height: 28rem !important;
@@ -1107,8 +1109,8 @@ a {
     }
 
     p {
-        font-size: .8125rem !important;
-        line-height: 1.5rem !important;
+        font-size: 1.5rem !important;
+        line-height: 1.9rem !important;
     }
     .header_wrapper .navbar-toggler i{
       margin-left: 500px;
@@ -1116,7 +1118,7 @@ a {
       font-weight: 900;
     }
 }
-
+/* 
 @media (max-width:599px) {
     html, body {
         width: 100% !important;
@@ -1145,7 +1147,7 @@ a {
 
     #home::before {
         content: "" !important;
-        background: rgba(6, 12, 34, 0.5) !important;
+        /* background: rgba(6, 12, 34, 0.5) !important; */
         position: absolute !important;
         bottom: 0 !important;
         top: 0 !important;
@@ -1153,9 +1155,33 @@ a {
         height: 750px !important;
         right: 0 !important;
     }
-
+    p {
+      font-size: 1.5rem !important;
+      line-height: 1.8rem !important;
+    }
+    #particles-js {
+      display: none !important; 
+    }
   
+    #home #particles-js {
+      display: block !important; 
+ 
 }
+#home #particles-js {
+  display: block !important; 
+}
+
+section:not(#home) #particles-js {
+  display: none !important; 
+}
+
+
+
+} */
+
+
+
+
 
 
 
@@ -1175,6 +1201,10 @@ a {
     height: 13rem;
     width: 14rem;
   }
+  p {
+    font-size: 2rem !important;
+    line-height: 2rem !important;
+}
 }
 
 @media screen and (min-width: 550px) and (max-width: 768px) {
@@ -1617,6 +1647,8 @@ a {
   background-size: cover;
   /* Use cover to ensure the image covers the entire element */
 }
+
+
 
 .ball {
   position: relative;
@@ -2192,6 +2224,11 @@ a {
   overflow: hidden;
 }
 
+.team_wrapper .card img {
+  margin: 10px; /* Adjust the value as needed */
+}
+
+
 .team_wrapper .team-info {
   background-color: var(--secondary-color);
   position: absolute;
@@ -2237,7 +2274,6 @@ a {
   color: var(--text-white);
   /* border: .0625rem solid var(--bg-white); */
 }
-
 
 /* Team Section Ends Here  */
 
