@@ -158,6 +158,16 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+  #particles-js {
+      display: block; /* Ensure it is displayed on mobile */
+  }
+  /* Hide any other #particles-js instances outside the specified section */
+  section:not(#home) #particles-js {
+      display: none !important;
+  }
+}
+
 
 .home_date-container .fa-calendar {
   font-size: 3rem;
