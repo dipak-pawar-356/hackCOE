@@ -1121,9 +1121,13 @@ a {
 
 @media (max-width:599px) {
     
-#home #particles-js {
-  display: none !important; 
-}
+  #particles-js{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    /* z-index: -1; */
+  }
 
 /* section:not(#home) #particles-js {
   display: none !important; 
