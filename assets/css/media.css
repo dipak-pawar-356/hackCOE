@@ -1,0 +1,229 @@
+@media screen and (max-width: 550px) {
+    .glimpses_container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .glimpse_flip-card {
+      height: 13rem;
+      width: 14rem;
+    }
+    p {
+      font-size: 2rem !important;
+      line-height: 2rem !important;
+  }
+  }
+  
+  @media screen and (min-width: 550px) and (max-width: 768px) {
+    .glimpses_container {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  
+    .glimpse_flip-card {
+      height: 18rem;
+      width: 15rem;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 990px) {
+    .glimpses_container {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  
+    .glimpse_flip-card {
+      height: 18rem;
+      width: 15rem;
+    }
+  }
+  
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  #about {
+    background: url("assets/img/New_bg/AboutOverlay.png") no-repeat center center;
+  }
+  html, body {
+          width: 100% !important;
+          height: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          overflow-x: hidden !important;
+      }
+  
+      .header_wrapper .navbar-toggler i{
+        margin-left: 400px;
+        margin-top: 10px;
+        font-size: 2rem;
+        font-weight: 900;
+      }
+  
+      #home {
+          height: 800px !important;
+          background-image: url(../images/ship_2_higher_res.png) !important;
+          background-size: cover !important;
+          background-repeat: no-repeat !important;
+          background-position: center center !important;
+          background-attachment: fixed !important;
+          padding: 200px 0 100px 0 !important;
+      }
+  
+      #home::before {
+          content: "" !important;
+          background: rgba(6, 12, 34, 0.5) !important;
+          position: absolute !important;
+          bottom: 0 !important;
+          top: 0 !important;
+          left: 0 !important;
+          height: 750px !important;
+          right: 0 !important;
+      }
+      p {
+        font-size: 1.5rem !important;
+        line-height: 1.8rem !important;
+      }
+      #particles-js {
+        display: none !important; 
+      }
+    
+      #home #particles-js {
+        display: block !important; 
+   
+  }
+  #about-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* Main About Section Container */
+  .about-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    justify-content: space-between; /* Creates space between child elements */
+    align-items: flex-start; /* Aligns items to the top of the container */
+    gap: 20px; /* Adds space between the flex items */
+    padding: 40px 20px; /* Adds padding inside the container */
+    max-width: 1200px; /* Restricts the container's width */
+    margin: 0 auto; /* Centers the container on the page */
+  }
+  
+  /* About Section */
+  #about {
+    background: url("assets/img/New_bg/AboutOverlay.png") no-repeat center center;
+    background-size: cover; /* Ensures the background image covers the whole section */
+    position: relative;
+    padding: 80px 0; /* Adds vertical padding for the section */
+    color: #fff; /* Text color */
+    text-align: left; /* Centers text content */
+    z-index: 1; /* Ensures it's above background content */
+  }
+  
+  /* Flex Container for Content in About Section */
+  #about-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Paragraph and Text Styling */
+  .about-container p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .about-container {
+      justify-content: left; /* Centers items when screen width is smaller */
+      gap: 15px; /* Reduces gap on smaller screens */
+    }
+  
+    #about-div {
+      padding: 20px; /* Adds padding for smaller screens */
+    }
+  
+    .about-container p {
+      font-size: 1rem; /* Slightly smaller font size for mobile */
+      line-height: 1.5; /* Adjusts line height for mobile */
+    }
+  }
+  
+  .stat_icons .counting {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .stats h5 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  @media (max-width: 992px) {
+    .medium-ship {
+      max-width: 100%;
+    }
+  }
+  
+  .medium-ship {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px; /* Adjust this value to move the ship downwards */
+  }
+  
+  @media (max-width: 992px) {
+    .medium-ship {
+      max-width: 100%;
+      margin-top: 15px; /* You can adjust this value for smaller screens */
+    }
+  }
+  
+  .left-container {
+    flex-basis: 60%;
+    /* Takes 60% of available space */
+    width: 60%;
+    padding: 15px;
+    box-sizing: border-box;
+    /* Include padding in the width calculation */
+    word-wrap: break-word;
+    /* Prevent long words or content from overflowing */
+  }
+  
+  .right-container {
+    flex-basis: 40%;
+    /* Takes 40% of available space */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    /* Prevent container from growing beyond its space */
+  }
+  
+  .right-container img {
+    max-width: 70%;
+    /* Ensures image never exceeds its container width */
+    height: auto;
+    object-fit: contain;
+    /* Prevents image from overflowing the container */
+    margin-bottom: 20%;
+  }
+  
+  /* Hide right-container on mobile */
+  @media (max-width: 768px) {
+    .right-container {
+      display: none;
+    }
+  
+    .left-container {
+      width: 100%;
+    }
+  }
+  
