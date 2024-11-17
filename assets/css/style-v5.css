@@ -1122,12 +1122,12 @@ a {
 @media (max-width:599px) {
     
 #home #particles-js {
-  display: block !important; 
-}
-
-section:not(#home) #particles-js {
   display: none !important; 
 }
+
+/* section:not(#home) #particles-js {
+  display: none !important; 
+} */
 
 
 
