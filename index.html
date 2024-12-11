@@ -38,6 +38,8 @@
     <link rel="stylesheet" href="assets/css/style-v5.css" media="all" />
     <link rel="stylesheet" href="assets/css/prizes-v5.css" media="all" />
     <link rel="stylesheet" href="assets/css/style.css" media="all" />
+    <link rel="stylesheet" href="assets/js/countdowntime/aos.css" media="all" />
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
@@ -189,39 +191,77 @@
                 
             </div>
     </section>
-        
 
-        
-        <section class="pb100 pt100" id="about">
-            <div class="about-container container">
-                <div class="row">
-                    <!-- Text Section -->
-                    <div class="col-lg-7 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-                        <div class="section_title">
-                            <h3 class="title-dark">About the event</h3>
+    <!-- CountDown Section Start -->
+    <section class="pb100 pt100" id="countdown-section">
+        <div class="countdown-container container">
+            <div class="row">
+                <!-- Countdown Timer Section -->
+                <div class="col-lg-7 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                    <div class="section_title">
+                        <h3 class="title-dark">Countdown to hackCOE</h3>
+                    </div>
+                    <div id="countdown" class="countdown-timer text-center">
+                        <div class="countdown-box">
+                            <span class="days"></span>
+                            <p>DAYS</p>
                         </div>
-                        <div id="about-div">
-
-                            <p>Step into the world of innovation and creativity through <b>hackCOE</b>, a high-energy hackathon bringing together coders, innovators, and designers to create, collaborate, and push the limits of technology.</p>
-
-                            <br>
-
-                            <p>Participants learn new skills and create products, websites, and applications to solve real-world problems while racing against the clock. hackCOE is an unforgettable experience for those wanting to innovate and impact their community with expert mentors and a supportive community!</p>
-                            <br>
-                            
-                            <p><b>Venue</b>[In-Person] - Shri Vithal Education & Research Institute, Pandharpur</p>
-                            <p><b>Dates</b> - 21-23 January 2025</p>
+                        <div class="countdown-box">
+                            <span class="hours"></span>
+                            <p>HRS</p>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="minutes"></span>
+                            <p>MINS</p>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="seconds"></span>
+                            <p>SECS</p>
                         </div>
                     </div>
-                    <!-- Ship Image Section -->
-                    <div class="col-lg-5 text-center aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-                        <img src="assets/img/new_assets/ship.png" alt="Event Ship Image" class="img-fluid medium-ship">
+                    <!-- Changing Statement -->
+                    <div class="countdown-info">
+                        <span id="info"></span>
                     </div>
                 </div>
+    
+                <!-- Event Image Section -->
+                <div class="col-lg-5 text-center aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                    <img src="assets/img/new_assets/hackathon-image.png" alt="Event Image" class="img-fluid medium-ship">
+                </div>
             </div>
-        </section>     
-    </div>
+        </div>
+    </section>
 
+        
+
+    <!-- About Section Start -->
+    <section class="pb100 pt100" id="about">
+        <div class="about-container container">
+            <div class="row">
+                <!-- Text Section -->
+                <div class="col-lg-7 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                    <div class="section_title">
+                        <h3 class="title-dark">About the event</h3>
+                    </div>
+                    <div id="about-div">
+                        <p>Step into the world of innovation and creativity through <b>hackCOE</b>, a high-energy hackathon bringing together coders, innovators, and designers to create, collaborate, and push the limits of technology.</p>
+                        <br>
+                        <p>Participants learn new skills and create products, websites, and applications to solve real-world problems while racing against the clock. hackCOE is an unforgettable experience for those wanting to innovate and impact their community with expert mentors and a supportive community!</p>
+                        <br>
+                        
+                        <p><b>Venue</b>[In-Person] - Shri Vithal Education & Research Institute, Pandharpur</p>
+                        <p><b>Dates</b> - 21-23 January 2025</p>
+                    </div>
+                </div>
+                <!-- Ship Image Section -->
+                <div class="col-lg-5 text-center aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                    <img src="assets/img/new_assets/ship.png" alt="Event Ship Image" class="img-fluid medium-ship">
+                </div>
+            </div>
+        </div>
+    </section>     
+    <!--- </div> -->
 
    <!-- Gallery Section Start  -->
     <section>
@@ -1148,6 +1188,54 @@
     </button>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Array of messages to display
+            const messages = [
+                "Win Amazing Prizes.",
+                "Collaborate with Innovators.",
+                "Showcase Your Skills.",
+                "Innovate and Create.",
+                "Push the Limits of Technology.",
+                "Join hackCOE Today!"
+            ];
+        
+            let messageIndex = 0; // To track which message we're on
+            let currentText = ''; // Text content we're currently typing
+            let charIndex = 0; // Index for characters in the current message
+            const typingElement = document.getElementById('info'); // The element where the text will appear
+        
+            // Function to type the message character by character
+            function typeMessage() {
+                const currentMessage = messages[messageIndex]; // Get the current message
+        
+                // Function to type each character
+                function typeCharacter() {
+                    if (charIndex < currentMessage.length) {
+                        currentText += currentMessage.charAt(charIndex); // Add the current character
+                        typingElement.innerHTML = `<span class="typing-effect">${currentText}</span>`; // Display the typed text
+                        charIndex++; // Move to the next character
+                        setTimeout(typeCharacter, 100); // Delay between each character (change 100 for faster typing speed)
+                    } else {
+                        // After the entire message is typed, wait for a short time before starting the next one
+                        setTimeout(() => {
+                            charIndex = 0; // Reset character index for the next message
+                            messageIndex = (messageIndex + 1) % messages.length; // Cycle through the messages
+                            currentText = ''; // Clear the current text
+                            typeMessage(); // Call typeMessage again to type the next message
+                        }, 2000); // Wait for 2 seconds before starting the next message
+                    }
+                }
+        
+                // Start typing the current message
+                typeCharacter();
+            }
+        
+            // Start typing the first message
+            typeMessage();
+        });        
+    </script>
+
+    <script>
             // collapsing header 
             let nav = document.querySelector(".navbar");
             window.onscroll = () => {
@@ -1190,6 +1278,27 @@
     </button>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="assets/js/countdowntime/countdowntime.js"></script>
+
+    <script>
+        (function () {
+            var qs, js, q, s, d = document,
+                gi = d.getElementById,
+                ce = d.createElement,
+                gt = d.getElementsByTagName,
+                id = "typef_orm_share",
+                b = "https://embed.typeform.com/";
+            if (!gi.call(d, id)) {
+                js = ce.call(d, "script");
+                js.id = id;
+                js.src = b + "embed.js";
+                q = gt.call(d, "script")[0];
+                q.parentNode.insertBefore(js, q)
+            }
+        })()
+    </script>
 
     <script src="assets/js/faq.js"></script>
     <script src="assets/js/custom.script.js"></script>
