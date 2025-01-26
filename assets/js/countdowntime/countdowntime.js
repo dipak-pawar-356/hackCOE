@@ -81,7 +81,7 @@
                 endtimeYear: 2025,
                 endtimeMonth: 1,
                 endtimeDate: 21,
-                endtimeHours: 0,
+                endtimeHours: 10,
                 endtimeMinutes: 0,
                 endtimeSeconds: 0,
             };
@@ -154,7 +154,7 @@
 $(document).ready(function() {
     $('#countdown').countdown100({
         endtimeYear: 2025,
-        endtimeMonth: 1,
+        endtimeMonth: 3,
         endtimeDate: 21,
         endtimeHours: 0,
         endtimeMinutes: 0,

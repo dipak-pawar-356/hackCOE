@@ -909,10 +909,18 @@ a {
 }
 
 /* Responsive styling */
+@media (min-width: 1199px) {
+.header_wrapper .navbar {
+  padding-bottom: 50px !important;
+}
+}
 
 @media (max-width: 1199px) {
   .header_wrapper .navbar-expand-lg .navbar-nav {
     align-items: center !important;
+  }
+  .header_wrapper .navbar {
+    padding-bottom: 50px !important;
   }
 
   .header_wrapper .navbar-expand-lg .navbar-nav .nav-link {
@@ -1004,7 +1012,7 @@ a {
   }
 
   .header_wrapper .navbar {
-    padding-bottom: 35px !important;
+    padding-bottom: 45px !important;
   }
 
   .header_wrapper .navbar-toggler i {
@@ -1121,7 +1129,7 @@ a {
   }
 
   .header_wrapper .navbar {
-    padding-bottom: 35px !important;
+    padding-bottom: 47px !important;
   }
 
   h1 {
@@ -1203,6 +1211,8 @@ a {
     /* z-index: -1; */
   }
 
+  
+
   .navbar-toggler i {
     margin-top: 10px !important;
     margin-left: 384px !important;
@@ -1221,22 +1231,53 @@ a {
   .navbar-toggler i {
     margin-left: 300px !important;
   }
+  .header_wrapper .navbar {
+    padding-bottom: 35px !important;
+  }
+
+  
 
   #themes p {
     font-size: 20px !important;
     font-weight: 700 !important;
+  }
+  .countdown-container{
+    margin-right: 10px !important;
   }
 }
 
 @media (max-width: 383px) {
+  
   .navbar-toggler i {
-    margin-left: 200px !important;
+    margin-left: 280px !important;
   }
 
+  .header_wrapper .navbar {
+    padding-bottom: 5px !important;
+  }
   #themes p {
     font-size: 20px !important;
     font-weight: 700 !important;
   }
+  .about-container{
+    padding: 15px;
+  }
+  .countdown-container{
+    padding: 15px;
+  }
+  .container{
+    padding: 15px !important;
+  }
+  .swiper{
+    padding: 15px;
+  }
+  .team_wrapper{
+    padding: 15px !important;
+  }
+  #faq{
+    padding: 10px !important;
+  }
+  
 }
 
 /* .lgx-photo-gallery-black .lgx-inner {
@@ -2195,17 +2236,26 @@ a {
 
 /* Team Section Starts Here  */
 
+
 .team_wrapper .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  /* width: 300px; */
+  padding: 10px;
   position: relative;
   overflow: hidden;
 }
 
 .team_wrapper .card img {
-  margin: 10px; /* Adjust the value as needed */
+  margin-top: 10px;
+  
 }
 
 .team_wrapper .team-info {
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
+  background-color: #45b6b6;
   position: absolute;
   width: 100%;
   bottom: 10px;

@@ -12,7 +12,7 @@
 
 .countdown-container {
     display: flex;
-    justify-content: space-between; /* Distribute the items between countdown and image */
+    justify-content: center; /* Distribute the items between countdown and image */
     align-items: center;
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
     width: 100%;
@@ -24,9 +24,13 @@
     align-items: center;
     gap: 15px;
     flex-wrap: nowrap;
+    padding: 0px;
     width: 100%;
-    max-width: 800px;
-    margin-right: 30px; /* Space between the countdown timer and text */
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.countdown-timer::-webkit-scrollbar {
+    display: none;
 }
 
 /* Typing Effect Styling */
@@ -41,28 +45,31 @@
 .countdown-box {
     background-color: #45B6B6;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    flex: 1;
-    min-width: 100px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    min-width: 120px;
+    max-width: calc(25% - 15px);
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     align-items: center;
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
 .countdown-box span {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .countdown-box p {
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: bold;
     color: #fff;
     margin-top: 10px;
@@ -81,6 +88,8 @@
 
 /* Event Image Styling */
 #countdown-section img {
+   padding-right: 150px; 
+    justify-content: center;
     margin: 0 auto; /* Centers the image */
     max-width: 100%; /* Ensure image is responsive */
     height: auto;
@@ -90,207 +99,105 @@
 
 
 /* Responsive Design */
-/* For max-width: 1199px (Large Screens) */
-@media (min-width: 1199px) {
+
+/* For large screens (desktops, laptops) */
+@media (min-width: 1200px) {
     .countdown-box {
-        font-size: 2rem; /* Slightly smaller font */
-        padding: 18px; /* Adjust padding */
+        font-size: 2rem;
+        padding: 20px;
     }
 
     .countdown-box span {
-        font-size: 3.3rem; /* Adjust number size */
+        padding-bottom: 3px !important;
+        font-size: 3.3rem;
+    }
+    .countdown-info {
+        font-size: 1.1rem;
+        padding-top: 20px;
     }
 
     .countdown-box p {
-        font-size: 1.1rem; /* Smaller text for labels */
+        font-size: 1.1rem;
     }
+
     #countdown-section img {
         margin-left: 100px;
     }
 }
 
-/* For max-width: 991px (Medium Screens) */
-@media (max-width: 991px) {
+/* For tablets and mobile devices */
+@media (max-width: 1199px) {
     .countdown-container {
         flex-direction: column; /* Stack items vertically */
     }
 
     .countdown-timer {
-        margin-bottom: 30px; /* Space between countdown and image */
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
-    /* Ensures the image stays centered */
     #countdown-section img {
         margin-top: 20px;
         margin-left: 0;
     }
-}
 
-/* For max-width: 1199px (Large Screens) */
-@media (max-width: 1199px) {
     .countdown-box {
-        font-size: 2rem; /* Slightly smaller font */
-        padding: 18px; /* Adjust padding */
+        font-size: 1.7rem;
+        padding: 14px;
+        max-width: 100%;
+        min-width: unset;
     }
 
     .countdown-box span {
-        font-size: 3.3rem; /* Adjust number size */
+        font-size: 3rem;
     }
 
     .countdown-box p {
-        font-size: 1.1rem; /* Smaller text for labels */
-    }
-    #countdown-section img {
-        margin-left: 30px;
+        font-size: 0.95rem;
     }
 }
 
-/* For max-width: 924px (Tablet Portrait) */
-@media (max-width: 924px) {
+/* For smaller tablets and mobile devices */
+@media (max-width: 768px) {
     .countdown-box {
-        font-size: 1.7rem; /* Adjust font size */
-        padding: 14px; /* Reduce padding */
+        font-size: 1.5rem;
+        padding: 12px;
+        max-width: 100%;
     }
 
     .countdown-box span {
-        font-size: 3rem; /* Smaller number size */
+        font-size: 2.9rem;
     }
 
     .countdown-box p {
-        font-size: 0.95rem; /* Adjust label font */
+        font-size: 0.85rem;
     }
+
     #countdown-section img {
+        padding-left: 100px;
         margin-top: 40px;
     }
 }
 
-/* For max-width: 684px (Tablet Landscape) */
-@media (max-width: 684px) {
-    .countdown-box {
-        font-size: 1.5rem; /* Smaller font size */
-        padding: 12px; /* Reduce padding */
-    }
-
-    .countdown-box span {
-        font-size: 2.9rem; /* Smaller number size */
-    }
-
-    .countdown-box p {
-        font-size: 0.85rem; /* Adjust label font */
-    }
-}
-
-/* For max-width: 625px (Small Tablets) */
-@media (max-width: 625px) {
-    .countdown-box {
-        font-size: 1.4rem; /* Reduce font size */
-        padding: 10px; /* Reduce padding */
-    }
-
-    .countdown-box span {
-        font-size: 2.8rem; /* Adjust number size */
-    }
-
-    .countdown-box p {
-        font-size: 0.85rem; /* Adjust label font */
-    }
-}
-
-/* For max-width: 599px (Large Mobile) */
-@media (max-width: 599px) {
-    .countdown-box {
-        font-size: 1.3rem; /* Reduce font size */
-        padding: 8px; /* Reduce padding */
-    }
-
-    .countdown-box span {
-        font-size: 2.7rem; /* Adjust number size */
-    }
-
-    .countdown-box p {
-        font-size: 0.8rem; /* Adjust label font */
-    }
-    #countdown-section img {
-        margin-top: 40px;
-    }
-}
-
-/* For max-width: 550px (Mobile Landscape) */
-@media (max-width: 550px) {
-    .countdown-box {
-        font-size: 1.2rem; /* Further reduce font size */
-        padding: 6px; /* Further reduce padding */
-    }
-
-    .countdown-box span {
-        font-size: 2.6rem; /* Adjust number size */
-    }
-
-    .countdown-box p {
-        font-size: 0.7rem; /* Adjust label font */
-    }
-}
-
-/* For max-width: 480px (Mobile Portrait) */
+/* For very small mobile devices (portrait & landscape) */
 @media (max-width: 480px) {
     .countdown-box {
-        font-size: 1.1rem; /* Reduce font size */
-        padding: 5px; /* Reduce padding */
+        font-size: 1.2rem;
+        padding: 6px;
+        max-width: 100%;
     }
 
     .countdown-box span {
-        font-size: 2.1rem; /* Adjust number size */
+        font-size: 2.6rem;
     }
 
     .countdown-box p {
-        font-size: 0.75rem; /* Adjust label font */
-    }
-}
-
-/* For max-width: 466px (Very Small Mobile) */
-@media (max-width: 466px) {
-    .countdown-box {
-        font-size: 1rem; /* Reduce font size */
-        padding: 4px; /* Reduce padding */
+        font-size: 0.7rem;
     }
 
-    .countdown-box span {
-        font-size: 1.9rem; /* Adjust number size */
-    }
-
-    .countdown-box p {
-        font-size: 0.75rem; /* Adjust label font */
-    }
-}
-
-/* For max-width: 383px (Extra Small Mobile) */
-@media (max-width: 383px) {
-    .countdown-box {
-        font-size: 0.9rem; /* Further reduce font size */
-        padding: 3px; /* Reduce padding */
-    }
-
-    .countdown-box span {
-        font-size: 1.8rem; /* Adjust number size */
-    }
-
-    .countdown-box p {
-        font-size: 0.55rem; /* Adjust label font */
-    }
-}
-
-/* For max-width: 375px (Extra Small Mobile - Smaller Devices) */
-@media (max-width: 375px) {
-    .countdown-box {
-        font-size: 0.8rem; /* Further reduce font size */
-        padding: 3px; /* Reduce padding */
-    }
-
-    .countdown-box span {
-        font-size: 1.8rem; /* Adjust number size */
-    }
-
-    .countdown-box p {
-        font-size: 0.75rem; /* Adjust label font */
+    #countdown-section img {
+        padding-left: 50px;
+        margin-top: 40px;
     }
 }
