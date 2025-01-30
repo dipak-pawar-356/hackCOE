@@ -194,11 +194,11 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--secondary-color) !important;
+  background: #f1f1f1 !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-color) !important;
+  background: #667c97 !important;
 }
 
 section {
@@ -551,8 +551,8 @@ section#counter-stats {
   box-sizing: border-box;
   padding: 20px;
   border: 1px solid white;
-  border-radius: 15px;
-  box-shadow: 10px 10px 8px #888;
+  border-radius: 10px !important;
+  box-shadow: 3px 3px 8px #888 !important;
 }
 
 .card-image {
@@ -2261,7 +2261,7 @@ a {
   bottom: 10px;
 
   text-align: center;
-  padding: 1.25rem;
+  padding: 1.25rem !important;
   margin-bottom: -4.6875rem;
   transition: all 0.3s ease-in-out;
 }
