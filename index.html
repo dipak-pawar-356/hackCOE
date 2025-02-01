@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>
-        hackCOE 1.0 | Biggest Student-run Hackathon | January 2025 | Offline
+        hackCOE 1.0 | Student-run Hackathon | March 2025 | Offline
         Hackathon
     </title>
 
     <link rel="icon" type="image/x-icon" href="assets/img/logo_final.png" />
 
-    <!-- Font Awesome Icons -->
+
     <script src="https://kit.fontawesome.com/8f4546bba1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -31,56 +31,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"   />
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-
-    <!-- <style>
-        body {
-            /* background-color: #f8f9fa; */
-            font-family: Arial, sans-serif;
-        }
-
-        .faq-header {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #343a40;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .accordion-item {
-            border: none;
-            border-bottom: 1px solid #dee2e6;
-        }
-
-        .accordion-button {
-            color: #495057;
-            font-weight: 500;
-            font-size: 1rem;
-            padding: 0.75rem 1.25rem;
-            border: none;
-            box-shadow: none;
-        }
-
-        .accordion-button:focus {
-            box-shadow: none;
-        }
-
-        .accordion-button:not(.collapsed) {
-            color: #212529;
-        }
-
-        .accordion-body {
-            font-size: 0.95rem;
-            color: #6c757d;
-            padding: 1rem 1.25rem;
-        }
-
-        #faqs{
-            background: #00001d !important;
-        }
-    </style> -->
-
-
 
 
 </head>
@@ -505,6 +455,7 @@
         </section>
 
 
+        
         <section id="prizes" class="pb100 pt100" style="margin-top: 200px;">
             <div class="container">
                 <div class="section_title">
@@ -645,16 +596,54 @@
     </div>
     </section>
 
+    <!-- /Schedule -->
+    <!-- class="pb100 pt100" id="schedule" -->
 
-    <section class="pb100 pt100" id="schedule">
+    <section >
         <div class="container">
-            <div class="section_title mb50">
-                <h3 class="title clr-white"> Event Schedule</h3>
+            <div class="section_title">
+                <h3 class="title-dark aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000"
+                    data-aos-anchor-placement="top-bottom">
+                    Schedule</h3>
             </div>
         </div>
-
-        <img src="./assets/img/new_assets/Schedule mobile.svg" alt="schedule" class="schedule">
-        <img src="./assets/img/new_assets/Schedule.svg" alt="schedule" class="schedule-laptop">
+        <div class="container text-center">
+            <div class="day-nav">
+                <button class="btn active" data-day="1">Day 1</button>
+                <button class="btn" data-day="2">Day 2</button>
+                <button class="btn" data-day="3">Day 3</button>
+            </div>
+            
+            <div class="schedule-container mt-4">
+                <div class="day-schedule active" data-day="1">
+                    <h2>Day 1</h2>
+                    <div class="schedule-item"><h3>Opening Ceremony</h3><p>9:00 AM - 10:00 AM</p></div>
+                    <div class="schedule-item"><h3>Workshop 1</h3><p>10:30 AM - 12:00 PM</p></div>
+                    <div class="schedule-item"><h3>Opening Ceremony</h3><p>9:00 AM - 10:00 AM</p></div>
+                    <div class="schedule-item"><h3>Workshop 1</h3><p>10:30 AM - 12:00 PM</p></div>
+                    <div class="schedule-item"><h3>Opening Ceremony</h3><p>9:00 AM - 10:00 AM</p></div>
+                    <div class="schedule-item"><h3>Workshop 1</h3><p>10:30 AM - 12:00 PM</p></div>
+                </div>
+                <div class="day-schedule" data-day="2">
+                    <h2>Day 2</h2>
+                    <div class="schedule-item active"><h3>Mentoring Session 1</h3><p>10:00 AM - 12:00 PM</p></div>
+                    <div class="schedule-item"><h3>Project Development</h3><p>12:00 PM - 6:00 PM</p></div>
+                    <div class="schedule-item active"><h3>Mentoring Session 1</h3><p>10:00 AM - 12:00 PM</p></div>
+                    <div class="schedule-item"><h3>Project Development</h3><p>12:00 PM - 6:00 PM</p></div>
+                    <div class="schedule-item active"><h3>Mentoring Session 1</h3><p>10:00 AM - 12:00 PM</p></div>
+                    <div class="schedule-item"><h3>Project Development</h3><p>12:00 PM - 6:00 PM</p></div>
+                </div>
+                <div class="day-schedule" data-day="3">
+                    <h2>Day 3</h2>
+                    <div class="schedule-item"><h3>Project Submission</h3><p>10:00 AM - 12:00 PM</p></div>
+                    <div class="schedule-item"><h3>Closing Ceremony</h3><p>5:00 PM - 7:00 PM</p></div>
+                    <div class="schedule-item"><h3>Project Submission</h3><p>10:00 AM - 12:00 PM</p></div>
+                    <div class="schedule-item"><h3>Closing Ceremony</h3><p>5:00 PM - 7:00 PM</p></div>
+                    <div class="schedule-item"><h3>Project Submission</h3><p>10:00 AM - 12:00 PM</p></div>
+                    <div class="schedule-item"><h3>Closing Ceremony</h3><p>5:00 PM - 7:00 PM</p></div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
@@ -796,7 +785,7 @@
         <center>
             <div class="row">
                 <div class="col-md-12 aos-init" data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-anchor-placement="top-bottom"> <a href="mailto:sponsorships@hackcbs.tech" class="disabled">
+                    data-aos-anchor-placement="top-bottom"> <a href="mailto:dipakpawaras19@gmail.com" class="disabled">
                         <button class="cta sponsor_us_btn">
                             <span class="hover-underline-animation" style="font-size: 17px;"> Sponsor Us </span>
 
@@ -1478,6 +1467,30 @@
             q.parentNode.insertBefore(js, q)
         }
     })()
+</script>
+
+
+<!-- Schedule -->
+
+<script>
+    document.querySelectorAll('.day-nav .btn').forEach(button => {
+        button.addEventListener('click', () => {
+            document.querySelectorAll('.day-nav .btn, .day-schedule').forEach(el => el.classList.remove('active'));
+            button.classList.add('active');
+            const targetDay = button.dataset.day;
+            const activeSchedule = document.querySelector(`.day-schedule[data-day='${targetDay}']`);
+            activeSchedule.classList.add('active');
+            animateScheduleItems(activeSchedule);
+        });
+    });
+
+    function animateScheduleItems(daySchedule) {
+        daySchedule.querySelectorAll('.schedule-item').forEach((item, index) => {
+            setTimeout(() => item.classList.add('active'), index * 200);
+        });
+    }
+
+    animateScheduleItems(document.querySelector('.day-schedule.active'));
 </script>
 
 <script src="assets/js/faq.js"></script>
