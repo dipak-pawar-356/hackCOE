@@ -43,14 +43,12 @@ body {
 
 /************************Progress Bar*************************/
 
-.progress {
+/* .progress {
   position: fixed;
   top: 12rem;
 
   left: 0;
   height: 6px;
-  /* background: rgb(175, 103, 226); */
-  /* background-color: rgb(167, 85, 214); */
   background: linear-gradient(
     92.48deg,
     #247878 0.26%,
@@ -62,7 +60,7 @@ body {
   transition: all linear 0.1s;
   min-width: 1%;
   z-index: 100;
-}
+} */
 
 .date-background {
   display: inline-block;
