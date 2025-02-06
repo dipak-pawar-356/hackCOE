@@ -771,8 +771,8 @@ a {
 }
 
 .collection .content {
-  height: 28rem !important;
-  width: 25rem !important;
+  height: 38rem !important;
+  width: 35rem !important;
   background-color: #1b1f2a !important;
   border: 0.2rem solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 0.7rem !important;
@@ -789,7 +789,7 @@ a {
 }
 
 /** Glimpses **/
-
+/* 
 .glimpse-title {
   line-height: 1.2;
   text-transform: uppercase;
@@ -837,10 +837,10 @@ a {
 
 .glimpse_flip-card {
   background-color: transparent;
-  height: auto; /* Remove fixed height to maintain responsiveness */
+  height: auto; 
   perspective: 1000px;
-  border: 0.2rem solid goldenrod; /* Golden border */
-  overflow: hidden; /* Ensure the card content doesn't overflow */
+  border: 0.2rem solid goldenrod; 
+  overflow: hidden; 
 }
 
 .glimpse_flip-card-inner {
@@ -872,30 +872,31 @@ a {
 }
 
 .glimpse_flip-card {
-  width: 20rem; /* Maintain rectangular width */
-  height: 16rem; /* Adjust height to make it slightly smaller than width */
+  width: 20rem; 
+  height: 16rem; 
 }
 
 .glimpses_container {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap if there's not enough space */
-  gap: 1rem; /* Add gap between cards */
-  justify-content: center; /* Center align */
+  flex-wrap: wrap; 
+  gap: 1rem; 
+  justify-content: center; 
   align-items: center;
-  overflow-y: scroll; /* Enable vertical scrolling */
+  overflow-y: scroll;
 }
 
 .glimpses_container::-webkit-scrollbar {
-  display: none; /* Hide scrollbar */
+  display: none;
 }
 
 .glimpses_container {
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  scrollbar-width: none; 
 }
 
 .glimpses_container:hover .glimpse_flip-card {
-  animation: scrollCards 10s linear infinite; /* Infinite scrolling */
-}
+  animation: scrollCards 10s linear infinite; 
+}  */
+
 
 @keyframes scrollCards {
   0% {
